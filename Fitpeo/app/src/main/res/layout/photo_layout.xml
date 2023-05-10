@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+   >
+
+    <data>
+        <variable
+            name="alpumitem"
+            type="comp.fitpeo.model.AlpumItem"/>
+    </data>
+     <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="5dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+        <ImageView
+            android:src="@{alpumitem.thumbnailUrl}"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:id="@+id/image"
+            android:scaleType="fitXY" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="100sp"
+            android:layout_toRightOf="@id/image"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_title"
+            android:text="@{alpumitem.title}"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/viewhungryymoney1"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="1dp"
+            android:layout_below="@+id/txt_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+
+            android:background="#CCC8C8" />
+         </RelativeLayout>
+     </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
